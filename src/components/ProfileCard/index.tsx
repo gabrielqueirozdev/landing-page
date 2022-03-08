@@ -8,9 +8,9 @@ import { Author } from 'types/api'
 import { getImageUrl } from 'utils/getImageUrl'
 
 const icons = {
-  twitter: <FaTwitter />,
-  github: <GrGithub />,
-  dribbble: <FaDribbble />
+  Twitter: <FaTwitter />,
+  GitHub: <GrGithub />,
+  Dribbble: <FaDribbble />
 }
 
 const ProfileCard: React.FC<Author> = ({
