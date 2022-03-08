@@ -32,10 +32,34 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment aboutProject on LandingPage {
+    sectionAboutProject {
+      title
+      description
+      image {
+        ...imageProps
+      }
+    }
+  }
+
+  fragment sectionTech on LandingPage {
+    sectionTech {
+      title
+      techIcons {
+        title
+        icon {
+          ...imageProps
+        }
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       ...logo
       ...header
+      ...aboutProject
+      ...sectionTech
     }
   }
 `
